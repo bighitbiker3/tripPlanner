@@ -13,4 +13,10 @@ app.use(express.static(__dirname + '/public'));
 
 app.use('/', routes);
 
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  console.error(err);
+  res.send('ERR');
+});
+
 app.listen(3000);
