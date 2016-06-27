@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <h3>Pages</h3>
+  <hr>
+  <ul class="list-unstyled">
+    <!-- PLACEHOLDER LIST OF PAGES -->
+    {% for activity in activities %}
+    <h1>{{activity.name}}</h1>
+    {% endfor %}
+  </ul>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
