@@ -77,3 +77,52 @@ ul {
 #day-choice {
   padding-left: 100px;
 }
+
+@media screen and (max-width: 1000px) {
+  #day-choice{
+    display:block;
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+  .navbar-brand{
+    font-size: 100px;
+    margin-top: 20px;
+    width: 100%;
+    display:block;
+    margin-bottom: 50px;
+  }
+  .nav-items{
+    display:block;
+  }
+  .dropdown-toggle{
+    font-size: 42px;
+  }
+  .badge {
+    font-size: 50px;
+    margin-bottom: 20px;
+    vertical-align: bottom;
+  }
+  .day-text {
+    display: none;
+  }
+  .navbar .container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #footer{
+    height: 30%;
+    text-align: center;
+    h2 {
+      font-size: 80px;
+      margin-bottom: 40px;
+
+    }
+    li p {
+      font-size: 50px;
+
+    }
+    li {
+      margin-left: 20px;
+    }
+  }
+}
