@@ -37,7 +37,7 @@ html, body, #map-canvas {
   height: 150px;
   background-color: rgba(0, 0, 0, 0.8);;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: visible;
   bottom:0;
 }
 
@@ -78,7 +78,11 @@ ul {
   padding-left: 100px;
 }
 
-@media screen and (max-width: 1000px) {
+
+.container {
+  padding: 0px;
+}
+@media screen and (max-width: 1000px) and (max-device-width: 1000px){
   #day-choice{
     display:block;
     padding-left: 0px;
@@ -93,6 +97,9 @@ ul {
   }
   .nav-items{
     display:block;
+  }
+  .dropdown-menu{
+    font-size: 40px;
   }
   .dropdown-toggle{
     font-size: 42px;
@@ -126,3 +133,34 @@ ul {
     }
   }
 }
+
+
+@media screen and (max-width: 1000px) and (min-device-width: 1001px) {
+  #day-choice {
+    padding-left:0px;
+    display:block;
+  }
+
+  .col-sm-12 {
+   width: 33.33%;
+  }
+}
+
+
+@media screen and (max-width: 767px) and (min-device-width: 1001px) {
+  #day-choice {
+    padding-left:0px;
+    display:block;
+  }
+
+  .col-sm-12 {
+   width: 100%;
+  }
+
+  #footer {
+    height: 30%;
+  }
+
+
+}
+
