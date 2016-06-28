@@ -33,9 +33,32 @@ html, body, #map-canvas {
   overflow-y: scroll;
   bottom: 0; }
 
-#footer .row:first-child {
-  margin-left: 20px; }
-
 .bottom-content {
   z-index: 1;
   color: white; }
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0; }
+
+.glyphicon {
+  color: #FF4d4d; }
+
+.day-text {
+  vertical-align: bottom;
+  font-size: 25px;
+  z-index: 1;
+  color: white; }
+
+.badge {
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid white; }
+
+.active {
+  background-color: #1A75FF;
+  border: 1px solid white; }
+
+#day-choice {
+  padding-left: 100px; }
