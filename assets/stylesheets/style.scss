@@ -1,3 +1,48 @@
-p {
-  margin: 0px;
+html, body, #map-canvas {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#map-canvas{
+  z-index: 0;
+}
+.navbar{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dropdown{
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.navbar-brand{
+  font-family: 'Baumans', cursive;
+  font-size: 40px;
+  margin-right: 40px;
+}
+
+.navbar{
+  .container{
+    margin-left: 0px;
+  }
+  padding: 7px;
+}
+
+#footer{
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.8);;
+  position: fixed;
+  overflow-y: scroll;
+  bottom:0;
+}
+#footer .row:first-child{
+  margin-left: 20px;
+}
+
+.bottom-content{
+  z-index: 1;
+  color: white;
 }
