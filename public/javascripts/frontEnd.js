@@ -171,6 +171,16 @@ $(document).ready(function() {
   });
 
 
+  // function updateInfo(info){
+  //   if(typeof info === 'string'){
+  //       //hotel = info
+  //   }else{
+  //       info.forEach(function(infomation){
+  //           //printout information
+  //       })
+  //   }
+
+  // }
 
 
 

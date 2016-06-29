@@ -28,8 +28,10 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              {% for place in places %}
               {% for activity in activities %}
-              <li id="{{activity.name}}" data-place-id="{{activity.placeId}}" class= "activity dropdown-for-nav"><a href="#">{{activity.name}}</a></li>
+              <li id="{{activity.name}}" data-place = {{place.id}} data-place-id="{{activity.placeId}}" class= "activity dropdown-for-nav"><a href="#">{{activity.name}}</a></li>
+                  {% endfor %}
                   {% endfor %}
             </ul>
           </div>
@@ -40,7 +42,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               {% for restaurant in restaurants %}
-              <li id="{{restaurant.name}}" data-place-id="{{restaurant.placeId}}" class= "restaurant dropdown-for-nav"><a href="#">{{restaurant.name}}</a></li>
+              <li id="{{restaurant.name}}"  data-place-id="{{restaurant.placeId}}" class= "restaurant dropdown-for-nav"><a href="#">{{restaurant.name}}</a></li>
                   {% endfor %}
             </ul>
           </div>
@@ -100,3 +102,5 @@
   <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+
