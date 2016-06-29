@@ -82,6 +82,10 @@ ul {
 .container {
   padding: 0px;
 }
+
+.day, #add-day{
+  cursor: pointer;
+}
 @media screen and (max-width: 1000px) and (max-device-width: 1000px){
   #day-choice{
     display:block;
@@ -163,4 +167,3 @@ ul {
 
 
 }
-

@@ -1,4 +1,4 @@
-function initialize_gmaps() {
+  function initialize_gmaps() {
     // initialize new google maps LatLng object
     var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
     // set the map options hash
@@ -131,6 +131,57 @@ function initialize_gmaps() {
 }
 
 $(document).ready(function() {
-    console.log('doc ready')
-    initialize_gmaps();
+  console.log('doc ready')
+  initialize_gmaps();
+
+  var trip = [];
+  //Add Day function
+  var counter = 0;
+  $('#add-day').on('click', function(){
+    counter++;
+    $('#day-choice').append('<span id="day' + counter + '"class="badge day">' + counter + '</span>');
+    var obj = {
+      hotel: '',
+      activities: [],
+      restaurants: []
+    };
+    trip.push(obj);
+  });
+  //Change Active State
+  $('#day-choice').on('click', function(event){
+    var $dayClicked = event.target;
+    $('#day-choice .active').removeClass('active currentDay');
+    $($dayClicked).addClass('active currentDay');
+  });
+
+  $('.activity').on('click', function(){
+    var $activityId = $(this).data('place-id');
+    var $currentDay = $('.currentDay').text() - 1;
+    trip[$currentDay].activities.push($activityId);
+  });
+  $('.restaurant').on('click', function(){
+    var $restaurantId = $(this).data('place-id');
+    var $currentDay = $('.currentDay').text() - 1;
+    trip[$currentDay].restaurants.push($restaurantId);
+  });
+  $('.hotel').on('click', function(){
+    var $hotelId = $(this).data('place-id');
+    var $currentDay = $('.currentDay').text() - 1;
+    trip[$currentDay].hotel = $hotelId;
+  });
+
+
+
+
+
+
 });
+
+//Add locations to each place/thing/event
+//Add Labels at locations
+//Dynamically update UI on button clicks
+// var Trip = [1: {
+//     Hotel: 'Str',
+//     restaurant: [],
+//     Activities: []
+//   },]

@@ -29,7 +29,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               {% for activity in activities %}
-              <li id="{{activity.name}}" class= "dropdown-for-nav"><a href="#">{{activity.name}}</a></li>
+              <li id="{{activity.name}}" data-place-id="{{activity.placeId}}" class= "activity dropdown-for-nav"><a href="#">{{activity.name}}</a></li>
                   {% endfor %}
             </ul>
           </div>
@@ -40,7 +40,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               {% for restaurant in restaurants %}
-              <li id="{{restaurant.name}}" class= "dropdown-for-nav"><a href="#">{{restaurant.name}}</a></li>
+              <li id="{{restaurant.name}}" data-place-id="{{restaurant.placeId}}" class= "restaurant dropdown-for-nav"><a href="#">{{restaurant.name}}</a></li>
                   {% endfor %}
             </ul>
           </div>
@@ -51,20 +51,14 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               {% for hotel in hotels %}
-              <li id="{{hotel.name}}" class= "dropdown-for-nav"><a href="#">{{hotel.name}}</a></li>
+              <li id="{{hotel.name}}" data-place-id="{{hotel.placeId}}" class= "hotel dropdown-for-nav"><a href="#">{{hotel.name}}</a></li>
                   {% endfor %}
             </ul>
           </div>
           <span id="day-choice">
             <span class="day-text">Day: </span>
-            <span class="badge">1</span>
-            <span class="badge">2</span>
-            <span class="badge active">3</span>
-            <span class="badge">4</span>
-            <span class="badge">5</span>
-            <span class="badge">6</span>
-            <span class="badge">7</span>
           </span>
+          <span id="add-day" class="badge">+</span>
         </div>
       </div>
     </div>
